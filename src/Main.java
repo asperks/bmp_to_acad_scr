@@ -7,7 +7,7 @@ import sun.security.ssl.Debug;
 public class Main {
 
    public static void main(String[] args) {
-      String sFileDir = "c:/PngToScr";
+      String sFileDir = "c:/BmpToScr";
       
       File folder = new File(sFileDir);
       File[] listOfFiles = folder.listFiles(); 
@@ -15,16 +15,16 @@ public class Main {
       for (int i = 0; i < listOfFiles.length; i++) {
          if (listOfFiles[i].isFile()) {
             String f = listOfFiles[i].getPath();
-            if (f.endsWith(".png") || f.endsWith(".PNG")) {
+            if (f.endsWith(".Bmp") || f.endsWith(".Bmp")) {
                // f is a filename in the directory that needs to be processed.
-               processPng(f);
+               processBmp(f);
             }
          }
       }
    }
    
    
-   private static void processPng(String sFile) {
+   private static void processBmp(String sFile) {
       System.out.println("Processing : " + sFile);
       
       File f = new File(sFile);
